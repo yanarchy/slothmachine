@@ -24,12 +24,12 @@ body {
 }
 
 #slot1 {
-	background:url('../images/coffeefilter.png') repeat-y;
+	background:url('../images/slot1-blur.png') repeat-y;
 	height: 200px;
 	width: 200px;
 }
 
-#slot2 {
+/*#slot2 {
 	background:url('../images/coffeemaker.png') repeat-y;
 	height: 200px;
 	width: 200px;
@@ -39,6 +39,10 @@ body {
 	background:url('../images/coffeemaker.png') repeat-y;
 	height: 200px;
 	width: 200px;	
+}*/
+
+.clear {
+	clear:both;
 }
 
 .button {

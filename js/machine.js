@@ -11,6 +11,34 @@ $(document).ready(function() {
 	var h = $(window).height();
 	var w = $(window).width();
 
+	// randomizer
+
+	var slot1Obj = {
+		0: 'coffeemaker.png',
+		1: 'espressomachine.png',
+		2: 'teapot.png',
+		3: 'coffeemaker.png',
+		4: 'espressomachine.png',
+		5: 'teapot.png'
+	}
+
+	var slot2Obj = {
+
+	}
+
+	var slot3Obj = {
+
+
+	}
+
+	// finds you a random selection 
+	var randomizer = function(obj) {
+		var index = Math.round(Math.random()*5);
+		console.log(obj[index]);
+		return obj[index];
+	};
+
+	var 
 
 	// create slot constructor
 	// var Reel = function(elem, velo) {
@@ -54,12 +82,14 @@ $(document).ready(function() {
 	// hide other buttons in beginning
 	$('#stop-button').hide();
 	$('#reset-button').hide();
+	$('#slot1').hide();
 
 
 	// when start button clicked, show stop, hide start
 	$('#start-button').click(function(){
-		
-		$('#slot1').pan({fps: 30, speed: 3, dir: 'up', depth: 70});
+		$('#start').hide();
+		$('#slot1').show();
+		$('#slot1').pan({fps: 100, speed: 40, dir: 'down', depth: 70});
 
 
 		console.log('start button clicked!');
@@ -75,6 +105,8 @@ $(document).ready(function() {
 		console.log('stop button clicked. stop the spinnin!');
 
 		$('#slot1').spStop();
+		$('#slot1').hide();
+		$('.machine').append('<img src="images/'+randomizer(slot1Obj)+'"/>');
 		
 		$('#stop-button').hide();
 		$('#reset-button').show();
@@ -87,25 +119,5 @@ $(document).ready(function() {
 		$('#start-button').show();
 	})
 
-
-
 })
 
-/* Functions Needed:
-- start
-- shuffle
-- stop
-- something that determines if you win
-- reset
-
-Extras:
-- spinning animation
-- "win" picture
-- "lose" picture
-
-Components:
-- title
-- button
-	-extra: animate it going up and down
-
-*/
