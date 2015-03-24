@@ -4,7 +4,7 @@
 
 Press the button and try your luck!
 
-## Built with just the basics:
+### Built with just the basics:
 
 * JavaScript
 * jQuery
@@ -13,9 +13,9 @@ Press the button and try your luck!
 * HTML & CSS3
 * And a little bit of Photoshop
 
-## Color Theme
+### Color Theme
 
-* <span color="#F2385A">pinkish-red: #F2385A</span>
+* pinkish-red: #F2385A
 * mustard: #F5A503
 * pearl: #E9F1DF
 * light blue: #4AD9D9
@@ -27,19 +27,22 @@ Press the button and try your luck!
 
 ### Functions Needed:
 
-[] start
-[] shuffler
-[] stop
-[] something that determines if you win
-[] reset
++ start
++ shuffler
++ stop
++ something that determines if you win
++ reset
 
 ### Components:
 
-[*] spinning animation
-[] "win" picture
-[] "lose" picture
-[] stylized title
-[] button that spins the machine
-	[] extra: animate it going up and down?
++ spinning animation/images
++ images of all items
++ "win" image
++ "lose" image
++ stylized title
++ button that spins the machine
 
 ### Extras:
+
++ vary slot speed--speed up and slow down
++ animate button or handle going up and down
