@@ -1,0 +1,39 @@
+body {
+	background-color: #4AD9D9;
+}
+
+.title {
+	text-align: center;
+	background-color: #36B1BF;
+  height: 100px;
+  border-top: rgba(54, 177, 191, 0.35) 10px groove;
+  border-bottom: rgba(54, 177, 191, 0.35) 10px groove;
+}
+
+.machine {
+	background-color: #E9F1DF;
+	width: 600px;
+	height: 300px;
+	border-radius: 25px;
+	border: white solid 3px;
+}
+
+.button {
+	background-color: #F5A503;
+	width: 600px;
+	height: 100px;
+	border-radius: 25px;
+	border: white solid 3px;
+
+}
+
+button {
+	left: 255px;
+	top: 27px;
+	position: relative;
+}
+
+footer {
+	margin-top: 2em;
+	text-align: center;
+}
