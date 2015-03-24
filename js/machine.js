@@ -31,14 +31,15 @@ $(document).ready(function() {
 
 	}
 
+	var slotResults = [];
+
 	// finds you a random selection 
 	var randomizer = function(obj) {
 		var index = Math.round(Math.random()*5);
 		console.log(obj[index]);
+		slotResults.push(index);
 		return obj[index];
 	};
-
-	var 
 
 	// create slot constructor
 	// var Reel = function(elem, velo) {

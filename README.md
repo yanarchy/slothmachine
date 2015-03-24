@@ -46,3 +46,4 @@ Press the button and try your luck!
 
 + vary slot speed--speed up and slow down
 + animate button or handle going up and down
++ sloth machine
