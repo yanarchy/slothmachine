@@ -8,38 +8,54 @@ body {
   height: 100px;
   border-top: rgba(54, 177, 191, 0.35) 10px groove;
   border-bottom: rgba(54, 177, 191, 0.35) 10px groove;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .machine {
 	background-color: #E9F1DF;
-	width: 600px;
-	height: 300px;
+	width: 620px;
+	height: 240px;
 	border-radius: 25px;
 	border: white solid 3px;
 }
 
-.machine .item1 {
-  height: 150px;
-  width: 150px;
+.defaultSlot {
+	margin-top: 20px;
+	border-radius: 25px;
+}
+
+.randomSlot {
+	margin-top: 20px;
+	border-radius: 25px;
 }
 
 #slot1 {
 	background:url('../images/slot1-blur.png') repeat-y;
 	height: 200px;
 	width: 200px;
+	position: relative;
+	margin-top: 20px;
+	display: inline-block;
+/*	border-radius: 25px;*/
 }
 
-/*#slot2 {
-	background:url('../images/coffeemaker.png') repeat-y;
+#slot2 {
+	background:url('../images/slot2-blur.png') repeat-y;
 	height: 200px;
 	width: 200px;
+	display: inline-block;
+	margin-top: 20px;
+/*	border-radius: 25px;*/
 }
 
 #slot3 {
-	background:url('../images/coffeemaker.png') repeat-y;
+	background:url('../images/slot3-blur.png') repeat-y;
 	height: 200px;
-	width: 200px;	
-}*/
+	width: 200px;
+	display: inline-block;
+	margin-top: 20px;
+/*	border-radius: 25px;*/
+}
 
 .clear {
 	clear:both;
@@ -47,7 +63,7 @@ body {
 
 .button {
 	background-color: #F5A503;
-	width: 600px;
+	width: 620px;
 	height: 100px;
 	border-radius: 25px;
 	border: white solid 3px;
@@ -55,9 +71,18 @@ body {
 }
 
 button {
-	left: 255px;
+	left: 200.5px;
 	top: 27px;
 	position: relative;
+	display: inline-block;
+}
+
+.success {
+	float: right;
+	width: 100px;
+	height: 100px;
+	background-color: black;
+	display: inline-block;
 }
 
 footer {

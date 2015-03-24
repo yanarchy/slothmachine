@@ -1,9 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Espresso Bar Slot Machine</title>
+	<title>Espresso Bar Sloth Machine</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Awesome fonts! -->
+	<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
@@ -11,25 +15,30 @@
 
 	</div>
 	<div class="title">
-		<h1>Expresso Bar Slot Machine</h1>
+		<h1>Expresso Bar <strike>Slot</strike> Sloth Machine</h1>
 	</div>
 
-	<div class="machine">
-	
-		<img id="start" src="images/coffeemaker.png"/>
-		<div id="slot1">
+	<div class="row">
+		<div class="machine">
+			<div class="machine-inner">
+				<img class="defaultSlot" src="images/coffeemaker.png"/>
+				<div id="slot1"></div>
+				<img class="defaultSlot" src="images/coffeefilter.png"/>
+				<div id="slot2"></div>
+				<img class="defaultSlot" src="images/coffeegrounds.png"/>
+				<div id="slot3"></div>
+				<div class="clear"></div>
+			</div>
+
 		</div>
-		<div id="slot2"></div>
-		<div id="slot3"></div>
-		<div class="clear"></div>
 
+		<div class="button">
+			<button id="start-button" class="btn btn-success btn-lg">GIVE ME CAFFEINE!</button>
+			<button id="stop-button" class="btn btn-danger btn-lg">STOP IT RIGHT NOW</button>
+			<button id="reset-button" class="btn btn-info btn-lg">LET'S GO AGAIN!!!!!</button>
+		</div>
 	</div>
 
-	<div class="button">
-		<button id="start-button" class="btn btn-success btn-lg">START</button>
-		<button id="stop-button" class="btn btn-danger btn-lg">STOP</button>
-		<button id="reset-button" class="btn btn-info btn-lg">RESET</button>
-	</div>
 
 	<footer>
 		Made by <a href="http://blog.fanofyan.com" target="_blank">Yan Fan</a>

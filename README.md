@@ -1,4 +1,13 @@
-# Espresso Bar Slot Machine
+# Espresso Bar Sloth Machine
+
+### Ok, I notice how it says sloth but you asked for slot.
+I may have typo-ed. BUT, I think it was meant to be.
+
+No caffeine for most people makes them a sloth.
+
+Ta-da.
+
+Sloth slot machine.
 
 ### What will you be having today?
 
@@ -21,9 +30,8 @@ Press the button and try your luck!
 * light blue: #4AD9D9
 * darker cheery blue: #36B1BF
 
-## Thoughts
 
-## Notes
+## Pre-Makin' Notes
 
 ### Functions Needed:
 
