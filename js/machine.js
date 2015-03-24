@@ -11,6 +11,40 @@ $(document).ready(function() {
 	var h = $(window).height();
 	var w = $(window).width();
 
+
+	// create slot constructor
+	// var Reel = function(elem, velo) {
+	// 	this.speed = 0; //starting speed is of course, 0
+	// 	this.velo = velo; //how fast
+	// 	this.elem = elem;
+	// 	this.seti = null;
+	// 	this.position = null;
+	
+	// 	$(elem).pan({
+	// 		fps: 30,
+	// 		dir: 'up',
+	// 		depth: 70
+
+	// 	});
+
+	// 	$(elem).spStop();
+
+	// };
+
+ //  Reel.prototype.start = function() {
+ //    $(this.elem).addClass('motion');
+ //    $(this.elem).spStart();
+ //    this.seti = window.setInterval(function() {
+ //        if(this.speed < 70) {
+ //            this.speed += this.step;
+ //            $(this.el).spSpeed(this.speed);
+ //        }
+ //    }, 100);
+ //  };
+
+	// var test = new Reel('slot1', 30);
+
+	
 	// centers button div
 	$('.button').css('margin-left', w*.06);
 	
@@ -21,17 +55,16 @@ $(document).ready(function() {
 	$('#stop-button').hide();
 	$('#reset-button').hide();
 
+
 	// when start button clicked, show stop, hide start
 	$('#start-button').click(function(){
+		
+		$('#slot1').pan({fps: 30, speed: 3, dir: 'up', depth: 70});
+
+
 		console.log('start button clicked!');
 		console.log('spin that wheel!!');
-		/*********
-		attempts at animation
-								********/
 
-		$('.item1').animate({
-			left: 100
-		}, "slow");
 
 		$('#stop-button').show();
 		$('#start-button').hide();
@@ -40,6 +73,9 @@ $(document).ready(function() {
 	// when stop button clicked, show reset, hide stop
 	$('#stop-button').click(function(){
 		console.log('stop button clicked. stop the spinnin!');
+
+		$('#slot1').spStop();
+		
 		$('#stop-button').hide();
 		$('#reset-button').show();
 	})

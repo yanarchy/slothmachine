@@ -19,11 +19,26 @@ body {
 }
 
 .machine .item1 {
-  -ms-transform: rotate(7deg); /* IE 9 */
-  -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
-  transform: rotate(7deg);
   height: 150px;
   width: 150px;
+}
+
+#slot1 {
+	background:url('../images/coffeefilter.png') repeat-y;
+	height: 200px;
+	width: 200px;
+}
+
+#slot2 {
+	background:url('../images/coffeemaker.png') repeat-y;
+	height: 200px;
+	width: 200px;
+}
+
+#slot3 {
+	background:url('../images/coffeemaker.png') repeat-y;
+	height: 200px;
+	width: 200px;	
 }
 
 .button {
