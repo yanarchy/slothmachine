@@ -25,6 +25,14 @@ $(document).ready(function() {
 	$('#start-button').click(function(){
 		console.log('start button clicked!');
 		console.log('spin that wheel!!');
+		/*********
+		attempts at animation
+								********/
+
+		$('.item1').animate({
+			left: 100
+		}, "slow");
+
 		$('#stop-button').show();
 		$('#start-button').hide();
 	})
@@ -42,7 +50,6 @@ $(document).ready(function() {
 		$('#reset-button').hide();
 		$('#start-button').show();
 	})
-
 
 
 

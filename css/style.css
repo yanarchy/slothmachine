@@ -18,6 +18,14 @@ body {
 	border: white solid 3px;
 }
 
+.machine .item1 {
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+  transform: rotate(7deg);
+  height: 150px;
+  width: 150px;
+}
+
 .button {
 	background-color: #F5A503;
 	width: 600px;

@@ -8,7 +8,9 @@ Press the button and try your luck!
 
 * JavaScript
 * jQuery
-* HTML & CSS
+* Twitter Bootstrap
+* <a href="http://spritely.net/" target="_blank">Spritely</a>
+* HTML & CSS3
 * And a little bit of Photoshop
 
 ## Color Theme:
