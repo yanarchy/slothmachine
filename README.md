@@ -16,6 +16,8 @@ If I had more time, I would have used CSS3 so that this would be more cross-brow
 
 I decided to create image ribbons with a 'blur' effect because it made the animation look faster without it actually being faster. The faster the animation, the slower it performs and it also just doesn't look as smooth.
 
+There are a few ways that I could have implemented the slot machine effect. I chose to use Spritely and have 'blur' image-columns because having separate pictures may cause the browser to slow down and also, the animation effect looks choppy after a certain speed. The blurred images make it look like it's much faster than it is.
+
 ### Built with:
 
 * JavaScript
