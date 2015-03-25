@@ -12,13 +12,6 @@ $(document).ready(function() {
 	  </a>'
 	);
 
-	var h = $(window).height();
-	var w = $(window).width();
-	// positions slot machine and results divs
-	$('.slothmachine').css('margin-left', w*.06).css('margin-top', h*.1);
-	$('#results').css('margin-right', w*.08).css('margin-top', h*.1);
-
-	// result images
 	var slot1Obj = {
 		0: 'coffeemaker.png',
 		1: 'teapot.png',

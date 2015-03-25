@@ -1,3 +1,9 @@
+html {
+	 font-size: 100%;
+	 -webkit-text-size-adjust: 100%;
+	 -ms-text-size-adjust: 100%;
+}
+
 body {
 	background-color: #4AD9D9;
 }
@@ -52,7 +58,6 @@ body {
 .randomSlot {
 	margin-top: 20px;
 	border-radius: 25px;
-	/*display: inline-block;*/
 }
 
 #slot1 {
@@ -62,7 +67,6 @@ body {
 	position: relative;
 	margin-top: 20px;
 	display: inline-block;
-/*	border-radius: 25px;*/
 }
 
 #slot2 {
@@ -71,7 +75,6 @@ body {
 	width: 200px;
 	display: inline-block;
 	margin-top: 20px;
-/*	border-radius: 25px;*/
 }
 
 #slot3 {
@@ -80,7 +83,6 @@ body {
 	width: 200px;
 	display: inline-block;
 	margin-top: 20px;
-/*	border-radius: 25px;*/
 }
 
 .clear {

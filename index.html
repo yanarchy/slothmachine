@@ -19,30 +19,38 @@
 	<div id="explanation">
 		<center><h3>Press the button and see what you get!</h3></center>
 	</div>
-	<div id="results"></div>
+	<div class="container">
+	<div class="row">
+	  <div class="col-md-7">
+			<div class="slothmachine">
+				<div class="top">
+					<h2>SLOTH MACHINE</h2>
+				</div>
+				<div class="machine">
+					<div class="machine-inner">
+						<img class="defaultSlot" src="images/sloth1.png"/>
+						<div id="slot1"></div>
+						<img class="defaultSlot" src="images/sloth2.png"/>
+						<div id="slot2"></div>
+						<img class="defaultSlot" src="images/sloth3.png"/>
+						<div id="slot3"></div>
+						<div class="clear"></div>
+					</div>
 
-	<div class="slothmachine">
-		<div class="top">
-			<h2>SLOTH MACHINE</h2>
-		</div>
-		<div class="machine">
-			<div class="machine-inner">
-				<img class="defaultSlot" src="images/sloth1.png"/>
-				<div id="slot1"></div>
-				<img class="defaultSlot" src="images/sloth2.png"/>
-				<div id="slot2"></div>
-				<img class="defaultSlot" src="images/sloth3.png"/>
-				<div id="slot3"></div>
-				<div class="clear"></div>
+				</div>
+
+				<div class="button">
+					<button id="start-button" class="btn btn-success btn-lg">GIVE ME CAFFEINE!</button>
+					<button id="stop-button" class="btn btn-danger btn-lg">STOP IT RIGHT NOW</button>
+					<button id="reset-button" class="btn btn-info btn-lg">LET'S GO AGAIN!!!!!</button>
+				</div>
 			</div>
-
+	  </div>
+		<div class="col-md-5">
+			<div id="results"></div>
 		</div>
-
-		<div class="button">
-			<button id="start-button" class="btn btn-success btn-lg">GIVE ME CAFFEINE!</button>
-			<button id="stop-button" class="btn btn-danger btn-lg">STOP IT RIGHT NOW</button>
-			<button id="reset-button" class="btn btn-info btn-lg">LET'S GO AGAIN!!!!!</button>
-		</div>
+	</div>
+	</div>
 	</div>
 
 </body>
