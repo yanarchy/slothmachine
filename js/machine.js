@@ -1,4 +1,8 @@
 $(document).ready(function() {
+	// hide other buttons in beginning
+	$('#stop-button').hide();
+	$('#reset-button').hide();
+
 	// Top-right ribbon that links to GitHub code
 	$('body').append(
 	  '<a href="https://github.com/yanarchy/slothmachine"> \
@@ -10,10 +14,11 @@ $(document).ready(function() {
 
 	var h = $(window).height();
 	var w = $(window).width();
-
+	// positions slot machine and results divs
 	$('.slothmachine').css('margin-left', w*.06).css('margin-top', h*.1);
 	$('#results').css('margin-right', w*.08).css('margin-top', h*.1);
 
+	// result images
 	var slot1Obj = {
 		0: 'coffeemaker.png',
 		1: 'teapot.png',
@@ -24,7 +29,6 @@ $(document).ready(function() {
 		1: 'teastrainer.png',
 		2: 'espressotamper.png'
 	}
-
 	var slot3Obj = {
 		0: 'coffeegrounds.png',
 		1: 'loosetea.png',
@@ -33,7 +37,7 @@ $(document).ready(function() {
 
 	var slotResults = [];
 
-	// finds you a random selection 
+	// finds you a random selection for results
 	var randomizer = function(obj) {
 		var index = Math.round(Math.random()*2.4);
 		console.log(obj[index]);
@@ -41,6 +45,8 @@ $(document).ready(function() {
 		console.log(slotResults);
 		return obj[index];
 	};
+
+	//determines if the user won caffeine + attaches message
 	var winner = function(array) {
 		if(array[0] === array[1] && array[1] === array[2]) {
 			$('#results').append('<h3>YOU WIN SOME CAFFEINE!</h3><img src="images/'+ array[0] + '.png" z-index="2" /><br><img src="images/caffeine.gif" width="200"/>');
@@ -53,65 +59,62 @@ $(document).ready(function() {
 	var Reel = function(elem, speed) {
 		this.speed = speed; //starting speed is of course, 0
 		this.elem = elem; //DOM element--should be an ID
-		this.position = null;
 
 		$(elem).hide();
-		// Spritely's .pan() to control animation
+
+		// animation to go up
 		$(elem).pan({
 			fps: 100,
 			speed: speed,
 			dir: 'down',
 			depth: 70
-
 		});
-    
-    $(elem).stop();
-
 	};
 
-	// method to stop the spinning
+	// method to start the spinning
   Reel.prototype.start = function() {
   	$(this.elem).show();
     $(this.elem).spStart();
   };
 
+  // method to stop the spinning
   Reel.prototype.stop = function() {
   	$(this.elem).spStop();
   	$(this.elem).hide();
-		// $('.machine').append('<img class="start" src="images/'+randomizer(slot2Obj)+'"/>');
   };
 
-	// hide other buttons in beginning
-	$('#stop-button').hide();
-	$('#reset-button').hide();
+  // create some reels!
+	var a = new Reel('#slot1', 20);
+	var b = new Reel('#slot2', 50);
+	var c = new Reel('#slot3', 35);
 
-	var a = new Reel('#slot1', 30);
-	var b = new Reel('#slot2', 35);
-	var c = new Reel('#slot3', 40);
-
-	// when start button clicked, show stop, hide start
+	// when start button clicked, show stop, hide start, start reels
 	$('#start-button').click(function(){
-		$('.defaultSlot').hide(); // hides initial pictures upon start
+		$('.defaultSlot').hide();
+		$('#stop-button').show();
+		$('#start-button').hide();
+		
+		// hides initial pictures upon start
 		a.start();
 		b.start();
 		c.start();
-
-		$('#stop-button').show();
-		$('#start-button').hide();
 	})
 
-	// when stop button clicked, show reset, hide stop
+	// when stop button clicked, show reset, hide stop, stops reels
 	$('#stop-button').click(function(){
 		a.stop();
 		b.stop();
 		c.stop();
 
+		// appends randomized result images
 		$('.machine').append('<img class="randomSlot" src="images/'+randomizer(slot1Obj)+'"/>');
 		$('.machine').append('<img class="randomSlot" src="images/'+randomizer(slot2Obj)+'"/>');
 		$('.machine').append('<img class="randomSlot" src="images/'+randomizer(slot3Obj)+'"/>');
 
 		$('#stop-button').hide();
-		$('#reset-button').show();		
+		$('#reset-button').show();
+
+		// finds the winners
 		winner(slotResults);
 
 	})
@@ -120,6 +123,8 @@ $(document).ready(function() {
 	$('#reset-button').click(function(){
 		$('.defaultSlot').show();
 		$('.randomSlot').remove();
+
+		// reset results
 		slotResults = [];
 
 		$('#reset-button').hide();

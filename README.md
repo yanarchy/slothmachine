@@ -5,9 +5,9 @@
 Press the button and try your luck!
 
 ### Ok, I notice how it says sloth but you asked for slot.
-I may have typo-ed. BUT, I think it was meant to be. No caffeine for most people makes them a sloth!
+I may have typo-ed. BUT, I think it was meant to be. No caffeine in the morning makes many of them a sloth for the rest of the day!
 
-Sloth slot machine.
+Thus, sloth slot machine.
 
 ### Notes
 
