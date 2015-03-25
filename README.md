@@ -11,7 +11,11 @@ Sloth slot machine.
 
 ### Notes
 
-This is only optimized for 
+This is only optimized for Chrome and only if the width of the window is >1100px. 
+
+If I had more time, I would have used CSS3 so that this would be more cross-browser friendly.
+
+I decided to create image ribbons with a 'blur' effect because it made the animation look faster without it actually being faster. The faster the animation, the slower it performs and it also just doesn't look as smooth.
 
 ### Built with:
 
