@@ -11,12 +11,18 @@ body {
   font-family: 'Permanent Marker', cursive;
 }
 
+#slothmachine {
+	float: left;
+	display: inline-block;
+}
+
 .machine {
 	background-color: #E9F1DF;
 	width: 620px;
 	height: 240px;
 	border-radius: 25px;
 	border: white solid 3px;
+	display: inline-block;
 }
 
 .defaultSlot {
@@ -27,6 +33,7 @@ body {
 .randomSlot {
 	margin-top: 20px;
 	border-radius: 25px;
+	/*display: inline-block;*/
 }
 
 #slot1 {
@@ -77,10 +84,9 @@ button {
 	display: inline-block;
 }
 
-.success {
+#results {
 	float: right;
-	width: 100px;
-	height: 100px;
+	position: relative;
 	background-color: black;
 	display: inline-block;
 }

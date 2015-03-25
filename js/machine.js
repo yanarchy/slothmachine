@@ -11,10 +11,8 @@ $(document).ready(function() {
 	var h = $(window).height();
 	var w = $(window).width();
 
-	// centers button div
-	$('.button').css('margin-left', w*.06);
-	// centers slot machine
-	$('.machine').css('margin-left', w*.06).css('margin-top', h*.1);
+	$('.slothmachine').css('margin-left', w*.06).css('margin-top', h*.1);
+	$('#results').css('margin-right', w*.06).css('margin-top', h*.1);
 
 	var slot1Obj = {
 		0: 'coffeemaker.png',
@@ -47,7 +45,7 @@ $(document).ready(function() {
 		if(array[0] === array[1] && array[1] === array[2]) {
 			console.log('YOU WIN!');
 		} else {
-			console.log('LOSE');
+			$('#results').append('<img width="300" src="images/losesloth.gif"/>');
 		}
 	};
 
@@ -122,7 +120,7 @@ $(document).ready(function() {
 		winner(slotResults);
 	})
 
-	// when reset button clicked, show start, hide reset
+	// when reset button clicked, reset everything!
 	$('#reset-button').click(function(){
 		$('.defaultSlot').show();
 		$('.randomSlot').remove();
@@ -130,6 +128,7 @@ $(document).ready(function() {
 
 		$('#reset-button').hide();
 		$('#start-button').show();
+		$('#results').children().remove();
 	})
 
 })
