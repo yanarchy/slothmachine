@@ -12,31 +12,17 @@ $(document).ready(function() {
 	  </a>'
 	);
 
-	var slot1Obj = {
-		0: 'coffeemaker.png',
-		1: 'teapot.png',
-		2: 'espressomachine.png'
-	}
-	var slot2Obj = {
-		0: 'coffeefilter.png',
-		1: 'teastrainer.png',
-		2: 'espressotamper.png'
-	}
-	var slot3Obj = {
-		0: 'coffeegrounds.png',
-		1: 'loosetea.png',
-		2: 'espressobeans.png'
-	}
+	var slot1Obj = ['coffeemaker.png', 'teapot.png', 'espressomachine.png'];
+	var slot2Obj = ['coffeefilter.png','teastrainer.png','espressotamper.png'];
+	var slot3Obj = ['coffeegrounds.png', 'loosetea.png', 'espressobeans.png'];
 
 	var slotResults = [];
 
 	// finds you a random selection for results
-	var randomizer = function(obj) {
+	var randomizer = function(array) {
 		var index = Math.round(Math.random()*2.4);
-		console.log(obj[index]);
 		slotResults.push(index);
-		console.log(slotResults);
-		return obj[index];
+		return array[index];
 	};
 
 	//determines if the user won caffeine + attaches message
@@ -49,16 +35,19 @@ $(document).ready(function() {
 	};
 
 	// create Reel constructor
-	var Reel = function(elem, speed) {
-		this.speed = speed; //starting speed is of course, 0
+	var Reel = function(elem, maxSpeed) {
+		this.speed = 0; //starting speed is of course, 0
+		this.maxSpeed = maxSpeed
 		this.elem = elem; //DOM element--should be an ID
+		this.velocity = 5;
+		this.setInt = null;
 
 		$(elem).hide();
 
 		// animation to go up
 		$(elem).pan({
 			fps: 100,
-			speed: speed,
+			speed: this.speed,
 			dir: 'down',
 			depth: 70
 		});
@@ -68,6 +57,20 @@ $(document).ready(function() {
   Reel.prototype.start = function() {
   	$(this.elem).show();
     $(this.elem).spStart();
+    // if(this.speed > this.maxSpeed) {
+    // 	window.setInterval(function(){
+    // 		this.speed+=this.velocity;
+    // 		$(this.elem).spSpeed(this.speed);
+    // 	}, 100);
+    // }
+    this.setInt = window.setInterval(function() {
+    	console.log('hello!');
+    	if(this.speed < this.maxSpeed) {
+    		this.speed += this.velocity;
+    		$(this.elem).spSpeed(this.speed);
+    	}
+    }, 100);
+
   };
 
   // method to stop the spinning
