@@ -47,7 +47,7 @@ $(document).ready(function() {
 		// animation to go up
 		$(elem).pan({
 			fps: 100,
-			speed: this.speed,
+			speed: maxSpeed,
 			dir: 'down',
 			depth: 70
 		});
@@ -57,20 +57,6 @@ $(document).ready(function() {
   Reel.prototype.start = function() {
   	$(this.elem).show();
     $(this.elem).spStart();
-    // if(this.speed > this.maxSpeed) {
-    // 	window.setInterval(function(){
-    // 		this.speed+=this.velocity;
-    // 		$(this.elem).spSpeed(this.speed);
-    // 	}, 100);
-    // }
-    this.setInt = window.setInterval(function() {
-    	console.log('hello!');
-    	if(this.speed < this.maxSpeed) {
-    		this.speed += this.velocity;
-    		$(this.elem).spSpeed(this.speed);
-    	}
-    }, 100);
-
   };
 
   // method to stop the spinning
