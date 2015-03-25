@@ -12,7 +12,7 @@ $(document).ready(function() {
 	var w = $(window).width();
 
 	$('.slothmachine').css('margin-left', w*.06).css('margin-top', h*.1);
-	$('#results').css('margin-right', w*.06).css('margin-top', h*.1);
+	$('#results').css('margin-right', w*.08).css('margin-top', h*.1);
 
 	var slot1Obj = {
 		0: 'coffeemaker.png',
@@ -43,9 +43,9 @@ $(document).ready(function() {
 	};
 	var winner = function(array) {
 		if(array[0] === array[1] && array[1] === array[2]) {
-			console.log('YOU WIN!');
+			$('#results').append('<h3>YOU WIN SOME CAFFEINE!</h3><img src="images/'+ array[0] + '.png" z-index="2" /><br><img src="images/caffeine.gif" width="200"/>');
 		} else {
-			$('#results').append('<img width="300" src="images/losesloth.gif"/>');
+			$('#results').append('<h3>Sorry, no caffeine for you.</h3><h3><small>You\'ll be a sloth today.</small></h3><img width="300" src="images/losesloth.gif" z-index="1"/>');
 		}
 	};
 
@@ -79,13 +79,11 @@ $(document).ready(function() {
   	$(this.elem).spStop();
   	$(this.elem).hide();
 		// $('.machine').append('<img class="start" src="images/'+randomizer(slot2Obj)+'"/>');
-  }
+  };
 
 	// hide other buttons in beginning
 	$('#stop-button').hide();
 	$('#reset-button').hide();
-	// $('#slot1').hide();
-	// $('#slot2').hide();
 
 	var a = new Reel('#slot1', 30);
 	var b = new Reel('#slot2', 35);
@@ -93,7 +91,7 @@ $(document).ready(function() {
 
 	// when start button clicked, show stop, hide start
 	$('#start-button').click(function(){
-		$('.defaultSlot').hide(); // hides initial pictures
+		$('.defaultSlot').hide(); // hides initial pictures upon start
 		a.start();
 		b.start();
 		c.start();
@@ -113,11 +111,9 @@ $(document).ready(function() {
 		$('.machine').append('<img class="randomSlot" src="images/'+randomizer(slot3Obj)+'"/>');
 
 		$('#stop-button').hide();
-		$('#reset-button').show();
-		console.log('slot!', slotResults);
-		
-
+		$('#reset-button').show();		
 		winner(slotResults);
+
 	})
 
 	// when reset button clicked, reset everything!
